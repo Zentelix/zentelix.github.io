@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', 'Orbitron', sans-serif;
+  color: #00ffff;
+  background: linear-gradient(135deg, #000015, #000028);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ffff33;
+  animation: fadeInTop 1s ease-out;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffff88;
+  animation: glowPulse 3s ease-in-out infinite;
+  user-select: none;
+}
+
+nav button {
+  background: transparent;
+  border: 1.5px solid #00ffff;
+  color: #00ffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #00ffff;
+  color: #000015;
+  box-shadow: 0 0 12px #00ffffaa;
+  transform: scale(1.05);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  padding: 3rem 2rem;
+}
+
+.pricing {
+  padding: 2rem 2.5rem;
+  border: 1px solid #00ffff33;
+  border-radius: 16px;
+  background-color: #00001c;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15), inset 0 0 8px rgba(0, 255, 255, 0.05);
+  animation: fadeInCard 0.8s ease-out;
+  text-align: center;
+}
+
+.pricing h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffff33;
+  border-radius: 14px;
+  padding: 2rem 1.8rem;
+  width: 280px;
+  box-shadow: 0 0 12px #00ffff22;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #00ffff55;
+  transform: translateY(-6px);
+}
+
+.card h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00ffff;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #00ffffcc;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.8rem;
+  width: 100%;
+  text-align: left;
+}
+
+.card ul li {
+  padding-left: 1.2rem;
+  margin-bottom: 0.9rem;
+  position: relative;
+  color: #00ffffcc;
+  font-weight: 400;
+}
+
+.card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00ffff;
+  font-size: 1.4rem;
+  top: 0;
+  line-height: 1;
+}
+
+.card button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.card button:hover {
+  background-color: #00ffff;
+  color: #000015;
+  box-shadow: 0 0 15px #00ffffcc;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 8px #00ffff66;
+  }
+  50% {
+    text-shadow: 0 0 16px #00ffffaa;
+  }
+}
+
+@keyframes fadeInTop {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

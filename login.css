@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', 'Orbitron', sans-serif;
+  color: #00ffff;
+  background: linear-gradient(135deg, #000015, #000028);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #00ffff33;
+  user-select: none;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00ffff;
+}
+
+.login-container {
+  background: #000015dd;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff55;
+  max-width: 400px;
+  width: 100%;
+  margin: 5rem auto;
+}
+
+.login-container h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #00ffffcc;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #00ffff44;
+  background-color: #000022;
+  color: #00ffff;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 8px #00ffffaa;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 40px;
+  border: 2px solid #00ffff;
+  background-color: transparent;
+  color: #00ffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  user-select: none;
+}
+
+.login-container button:hover {
+  background-color: #00ffff;
+  color: #000015;
+  box-shadow: 0 0 15px #00ffffcc;
+}
+
+.error-message {
+  color: #ff3333;
+  font-size: 0.85rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  min-height: 1rem;
+}

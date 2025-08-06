@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zentelix - Planes y Precios</title>
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+<body>
+  <header>
+    <h1>Zentelix</h1>
+    <nav>
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="alert('Registro próximamente')">Registro</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pricing">
+      <h3>Planes y Precios</h3>
+      <div class="pricing-cards">
+        <article class="card">
+          <h4>Basic</h4>
+          <p class="price">$29 / mes</p>
+          <ul>
+            <li>1 cámara conectada</li>
+            <li>Detección y conteo básico</li>
+            <li>Alertas por correo</li>
+            <li>Reportes mensuales</li>
+          </ul>
+          <button onclick="choosePlan('Basic')">Elegir Plan</button>
+        </article>
+
+        <article class="card">
+          <h4>Pro</h4>
+          <p class="price">$79 / mes</p>
+          <ul>
+            <li>Hasta 5 cámaras conectadas</li>
+            <li>Detección avanzada con IA</li>
+            <li>Alertas en tiempo real</li>
+            <li>Reportes semanales</li>
+          </ul>
+          <button onclick="choosePlan('Pro')">Elegir Plan</button>
+        </article>
+
+        <article class="card">
+          <h4>Enterprise</h4>
+          <p class="price">Personalizado</p>
+          <ul>
+            <li>Cámaras ilimitadas</li>
+            <li>Integración API completa</li>
+            <li>Soporte prioritario 24/7</li>
+            <li>Reportes personalizados</li>
+          </ul>
+          <button onclick="choosePlan('Enterprise')">Contactar Ventas</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Zentelix. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="pricing.js"></script>
+</body>
+</html>

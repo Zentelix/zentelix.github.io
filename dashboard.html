@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zentelix - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header>
+    <h1>Zentelix Dashboard</h1>
+    <button id="logoutBtn">Cerrar sesión</button>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Bienvenido al panel de control</h2>
+      <p>Desde aquí podés gestionar tus cámaras, monitorear en tiempo real y ver resultados analizados por IA.</p>
+    </section>
+
+    <section class="actions">
+      <button id="connectCameraBtn">Conectar cámara</button>
+      <button id="liveAnalysisBtn">Ver análisis en vivo</button>
+      <button id="reportsBtn">Reportes históricos</button>
+      <button id="configBtn">Configuración</button>
+    </section>
+
+    <section class="video-section">
+      <h3>Vista en vivo</h3>
+      <video id="cameraFeed" autoplay playsinline muted></video>
+    </section>
+
+    <section class="analysis-results">
+      <h3>Análisis en tiempo real</h3>
+      <ul>
+        <li>👤 Personas detectadas: <span id="personCount">0</span></li>
+        <li>⏱ Tiempo promedio en escena: <span id="avgTime">0s</span></li>
+        <li>⚠️ Alertas activas: <span id="alertCount">0</span></li>
+      </ul>
+    </section>
+
+    <section class="status">
+      <h3>Estado del sistema</h3>
+      <p id="cameraStatus">Cámara: desconectada</p>
+      <p id="analysisStatus">Análisis en vivo: detenido</p>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

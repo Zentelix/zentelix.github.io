@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', 'Orbitron', sans-serif;
+  color: #00ffff;
+  background: linear-gradient(135deg, #000015, #000028);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ffff33;
+  user-select: none;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00ffff;
+}
+
+header button {
+  background: transparent;
+  border: 1.5px solid #00ffff;
+  color: #00ffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+header button:hover {
+  background-color: #00ffff;
+  color: #000015;
+  box-shadow: 0 0 8px #00ffffaa;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+main section.welcome h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.15em;
+  color: #00ffff;
+}
+
+main section.welcome p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #00ffffcc;
+}
+
+main section.actions button {
+  margin: 0.8rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  user-select: none;
+}
+
+main section.actions button:hover {
+  background-color: #00ffff;
+  color: #000015;
+  box-shadow: 0 0 12px #00ffffcc;
+}
+
+main section.status {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid #00ffff33;
+  border-radius: 12px;
+  background-color: #00001a;
+  box-shadow: 0 0 12px #00ffff44;
+  max-width: 600px;
+  color: #00ffffcc;
+  font-weight: 400;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+main section.status h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  letter-spacing: 0.1em;
+}
