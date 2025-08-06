@@ -1,0 +1,153 @@
+body {
+    background: radial-gradient(circle at top left, #001122, #000015 70%);
+    color: #00ffff;
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-shadow: inset 0 0 100px #004466;
+  }
+  
+  header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #00ffff44;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+  
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 8px #00ffffaa;
+  }
+  
+  header button {
+    border: 2px solid #00ffff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #00ffff;
+    box-shadow: 0 0 10px #00ffff44;
+  }
+  
+  header button:hover,
+  header button:focus {
+    background: #00ffff;
+    color: #000015;
+    box-shadow: 0 0 20px #00ffffcc;
+    outline: none;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+  }
+  
+  .monitor-area {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  #videoContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background: black;
+  }
+  
+  #monitorFeed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    z-index: 1;
+    visibility: visible;
+  }
+  
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  #monitorInfo {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #00ffff;
+  }
+
+  #statusBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  #status.live {
+    color: #00ff99;
+  }
+  
+  #status.paused {
+    color: #ff3366;
+  }
+  
+  #pauseBtn,
+  #snapshotBtn {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #00ffff;
+    background: transparent;
+    color: #00ffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #pauseBtn:hover,
+  #snapshotBtn:hover {
+    background: #00ffff;
+    color: #000028;
+  }
+  
+  #log {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 6px;
+    max-height: 120px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+  

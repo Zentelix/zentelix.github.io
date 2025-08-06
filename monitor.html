@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monitorización - Zentelix</title>
+  <link rel="stylesheet" href="monitor.css" />
+</head>
+<body>
+  <header>
+    <h1>Zentelix - Monitor</h1>
+    <button type="button" onclick="location.href='dashboard.html'">Volver al Dashboard</button>
+  </header>
+
+  <main>
+    <section class="monitor-area">
+      <h3>Monitoreo activo</h3>
+      <div id="videoContainer">
+        <video id="monitorFeed" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+      </div>
+      <div id="monitorInfo" aria-live="polite">
+        <div id="statusBar">
+          <span id="clock">00:00:00</span>
+          <span id="status" class="live">🟢 Monitoreando</span>
+        </div>
+        <p><strong>Personas detectadas:</strong> <span id="personCount">0</span></p>
+        <p><strong>Autos detectados:</strong> <span id="carCount">0</span></p>
+        <button id="pauseBtn">⏸️ Pausar</button>
+        <button id="snapshotBtn">📸 Capturar</button>
+        <div id="log">
+          <h4>Registro de eventos:</h4>
+          <ul id="eventList"></ul>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.7.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="monitor.js"></script>
+</body>
+</html>

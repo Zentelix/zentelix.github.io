@@ -197,3 +197,25 @@ main {
     transform: translateY(0);
   }
 }
+
+.cta-btn {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .cta-btn:hover {
+    background-color: #00ffff;
+    color: #000043;
+    box-shadow: 0 0 18px #00ffffcc;
+    transform: scale(1.05);
+  }
+  

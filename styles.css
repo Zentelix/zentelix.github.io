@@ -10,7 +10,6 @@
 
 body {
   background: linear-gradient(135deg, #000835, #020029);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -20,7 +19,7 @@ body {
 
 header {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -32,7 +31,7 @@ header {
   header h1 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     letter-spacing: 0.2em;
     color: #00ffff;
     text-shadow: 0 0 12px #00ffff88;
@@ -92,7 +91,7 @@ header {
   
   .hero h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
     letter-spacing: 0.1em;
     color: #00ffff;
@@ -147,7 +146,7 @@ header {
     border-radius: 16px;
     padding: 2rem 2.5rem;
     margin: 3rem auto;
-    max-width: 70%;
+    max-width: 100%;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), inset 0 0 8px rgba(0, 255, 255, 0.05);
     animation: fadeInCard 1.2s ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -173,7 +172,7 @@ header {
     font-size: 1.2rem;
     color: #00ffffcc;
     line-height: 1.6;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     animation: fadeInUp 1.4s ease-out;
   }
@@ -183,7 +182,7 @@ header {
     border: 1px solid #00ffff33;
     border-radius: 16px;
     padding: 2rem 3rem;
-    max-width: 800px;
+    max-width: 100%;
     margin: 3rem auto;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.12), inset 0 0 10px rgba(0, 255, 255, 0.04);
     animation: fadeInCard 1.4s ease-out;
@@ -262,7 +261,7 @@ header {
     border: 1px solid #00ffff33;
     border-radius: 16px;
     padding: 2.2rem 3rem;
-    max-width: 80$;
+    max-width: 100%;
     margin: 3rem auto;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.15), inset 0 0 10px rgba(0, 255, 255, 0.05);
     animation: fadeInCard 1.6s ease-out;
@@ -344,6 +343,27 @@ footer {
   user-select: none;
 }
 
+button.cta-btn {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  button.cta-btn:hover {
+    background-color: #00ffff;
+    color: #000043;
+    box-shadow: 0 0 18px #00ffffcc;
+    transform: scale(1.05);
+  }  
+
 .login-container {
   background: #000015dd;
   padding: 2.5rem 3rem;
@@ -413,8 +433,8 @@ footer {
 }
 
 .testimonials {
-    max-width: 700px;
-    margin: 3rem auto;
+    max-width: 100%;
+    margin: 2rem auto;
     padding: 2rem 2.5rem;
     background-color: #00204eb9;
     border: 1px solid #00ffff33;
@@ -430,14 +450,14 @@ footer {
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     color: #00ffff;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.1em;
     text-align: center;
   }
   
   .testimonial-slider {
     position: relative;
-    height: 150px; /* altura fija para evitar saltos */
+    height: 150px; 
   }
   
   .testimonial-card {
@@ -471,7 +491,7 @@ footer {
   }
   
     main section {
-    max-width: 70%;
+    max-width: 100%;
     margin: 3rem auto;
     padding: 2rem 2.5rem;
     border: 1px solid #00ffff33;
@@ -517,6 +537,106 @@ footer {
     }
     50% {
       text-shadow: 0 0 16px #00ffffaa;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    body {
+      padding: 0 1rem;
+      align-items: stretch;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    header h1 {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  
+    nav button {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+  
+    .hero button {
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    main section {
+      max-width: 100%;
+      padding: 1.5rem 1.2rem;
+      margin: 2rem 0.5rem;
+    }
+  
+    .about p,
+    .solutions ul,
+    .benefits ul {
+      max-width: 100%;
+    }
+  
+    .solutions ul li,
+    .benefits ul li {
+      font-size: 1rem;
+    }
+  
+    .benefits ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .testimonial-slider {
+      height: 15vh;
+    }
+  
+    .testimonial-card blockquote {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .testimonial-card cite {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+      padding: 1rem;
+    }
+  
+    .social-btn {
+      display: block;
+      margin: 1rem auto 0;
+      width: fit-content;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 20px;
     }
   }
   

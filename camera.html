@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conectar Cámara - Zentelix</title>
+  <link rel="stylesheet" href="camera.css" />
+</head>
+<body>
+  <header>
+    <h1>Conectar Cámara</h1>
+    <button onclick="location.href='dashboard.html'">Volver al Dashboard</button>
+  </header>
+
+  <main>
+    <section class="connect-options">
+      <h2>Conexión a una cámara</h2>
+
+      <div class="webcam-option">
+        <button onclick="connectWebcam()">Usar mi webcam</button>
+      </div>
+
+      <div class="url-option">
+        <input type="text" id="cameraURL" placeholder="Ingresá la URL del stream (ej. http://ip:puerto)" />
+        <button onclick="connectURL()">Conectar por URL</button>
+      </div>
+    </section>
+
+    <section class="video-preview">
+        <h3>Vista previa</h3>
+        <video id="videoFeed" autoplay playsinline controls muted style="max-width: 100%; display: none;"></video>
+        <div id="iframeContainer" style="width: 100%; max-width: 800px; height: 600px; margin-top: 1rem; display: none;"></div>
+
+      </section>
+      
+  </main>
+
+  <section class="confirm-section" style="text-align:center; margin-top: 2rem;">
+    <button onclick="confirmCamera()">Confirmar cámara y monitorear</button>
+  </section>
+  
+
+  <script src="camera.js"></script>
+</body>
+</html>
